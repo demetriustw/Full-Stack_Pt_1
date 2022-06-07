@@ -1,0 +1,157 @@
+/* SIDE BAR NAVIGATION */
+/* MY (RANDOM) ATTEMPT */
+
+/* NAV HIDE/SHOW BTN */
+.show-nav {
+  margin-left: 1200px;
+  margin-top: 15px;
+  border-radius: 12px;
+  position: fixed;
+  /* HIDE THE BTN */
+  /* visibility: hidden; */
+}
+
+.Snav-icon {
+  stroke: #087f5b;
+  width: 48px;
+  height: 48px;
+}
+
+/* .show-hover {
+  cursor: pointer;
+} */
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+input:hover + label {
+  cursor: pointer;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.09);
+}
+
+input + label ~ .nav--bar {
+  visibility: visible;
+  /* animation: showNav 0.5s ease-in reverse both; */
+}
+
+input:checked + label ~ .nav--bar {
+  visibility: hidden;
+  /* animation: hideNav 1s ease-out both; */
+}
+
+@keyframes showNav {
+  from {
+    width: 40;
+    margin-left: 0;
+  }
+  to {
+    width: 0;
+    margin-left: -150px;
+  }
+}
+
+@keyframes hideNav {
+  from {
+    width: 40;
+    margin-left: 0;
+  }
+  to {
+    width: 0;
+    margin-left: -150px;
+  }
+}
+
+/* NAVIGATION BAR */
+.nav--bar {
+  margin-top: 0px;
+  background-color: black;
+  position: fixed;
+  height: 651px;
+  width: 40px;
+  padding-top: 40px;
+  box-shadow: 3px 6px 8px #343a40;
+  animation: navStart 0.5s ease reverse both;
+  /* HIDE THE NAV */
+  /* visibility: hidden; */
+}
+
+.nav--bar:hover {
+  width: 150px;
+  list-style: none;
+  animation: navEnd 0.5s ease both;
+}
+
+.nav--bar a {
+  text-decoration: none;
+}
+
+.nav--bar a:visited {
+  color: #099268;
+}
+
+.nav--btn {
+  margin-top: 25px;
+  margin-left: 8px;
+}
+
+.nav--btn:hover {
+  margin-left: 15px;
+  background-color: #0992698c;
+}
+
+.nav--bar:hover li {
+  opacity: 100%;
+  margin-left: 30px;
+  color: #099268;
+  animation: navBtnStart 0.7s ease both;
+}
+
+.nav--bar li {
+  opacity: 0;
+  margin-top: -23px;
+  list-style: none;
+  animation: navBtnEnd 0.3s ease reverse both;
+}
+
+@keyframes navStart {
+  from {
+    width: 40px;
+  }
+  to {
+    width: 150px;
+  }
+}
+
+@keyframes navEnd {
+  from {
+    width: 40px;
+  }
+  to {
+    width: 150px;
+  }
+}
+
+@keyframes navBtnStart {
+  from {
+    margin-left: 0px;
+    opacity: 0%;
+  }
+  to {
+    margin-left: 30px;
+    opacity: 100%;
+  }
+}
+
+@keyframes navBtnEnd {
+  from {
+    margin-left: 0px;
+    opacity: 0%;
+  }
+  to {
+    margin-left: 30px;
+    opacity: 100%;
+  }
+}
