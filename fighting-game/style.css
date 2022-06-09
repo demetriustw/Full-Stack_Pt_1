@@ -7,6 +7,7 @@
 .redConD {
   position: relative;
   display: inline-block;
+  /* margin-left: 25.6rem; */
 }
 
 /* small red container */
@@ -21,15 +22,33 @@
 /* Tie Text */
 .tie {
   position: absolute;
-  color: white;
-  align-items: center;
+  -webkit-text-stroke: 5px white;
+  paint-order: stroke fill;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  color: red;
+  font-size: 1.3em;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
 }
+
+/* .tie .s1 {
+  color: white;
+  font-size: 32px;
+  column-gap: 8px;
+}
+
+.tie .s2 {
+  display: flex;
+  flex-direction: row;
+  color: red;
+  column-gap: 15px;
+  font-size: 25px;
+} */
 
 /* .redConD::after {
   position: absolute;
@@ -61,6 +80,10 @@
   background-color: red;
   height: 30px;
   width: 100%;
+}
+
+#playerHealth {
+  transition: all 0.4s ease-out;
 }
 
 .keepCenteredP {
@@ -105,6 +128,11 @@
 .EH {
   background-color: red;
   height: 30px;
+  width: 100%;
+}
+
+#enemyHealth {
+  transition: all 0.4s ease-out;
 }
 
 .keepCenteredE {
@@ -114,4 +142,5 @@
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
 }

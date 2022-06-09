@@ -12,7 +12,8 @@
   </head>
   <body>
     <!-- red container div -->
-    <div class="redConD">
+    <a href="javascript: reload()">Click to reload</a>
+    <div href="#Game" class="redConD">
       <!-- small red container div -->
       <div class="smlRConD">
         <!-- player health -->
@@ -22,7 +23,7 @@
         </div>
 
         <!-- timer -->
-        <div id="timer" class="T"></div>
+        <div id="timer" class="T">60</div>
 
         <!-- enemy health -->
         <div class="ContainerE">
@@ -30,11 +31,11 @@
           <div id="enemyHealth" class="keepCenteredE"></div>
         </div>
       </div>
-      <div id="displayText" class="tie">Tie</div>
+      <div id="displayText" class="tie"></div>
       <canvas></canvas>
     </div>
     <script src="js/utils.js"></script>
     <script src="js/classes.js"></script>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -20,6 +20,11 @@ class Sprite {
   }
 
   draw() {
+    if (!keys.Escape.pressed) {
+      document.querySelector("#displayText").style.display = "flex";
+      const text = document.querySelector("#displayText");
+      text.innerHTML = "Press Esc To Start!";
+    }
     c.drawImage(
       this.image,
       this.framesCurrent * (this.image.width / this.framesMax),
@@ -34,6 +39,8 @@ class Sprite {
   }
 
   animateFrames() {
+    // for pause feature
+    // if (keys.Escape.pressed) {
     this.framesElapsed++;
 
     if (this.framesElapsed % this.framesHold === 0) {
@@ -43,6 +50,7 @@ class Sprite {
         this.framesCurrent = 0;
       }
     }
+    // }
   }
 
   update() {
