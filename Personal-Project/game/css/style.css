@@ -22,14 +22,17 @@
 /* Tie Text */
 .tie {
   position: absolute;
-  color: white;
+  content: inherit;
+  -webkit-text-stroke: 0.5px white;
+  display: flex;
   align-items: center;
   justify-content: center;
+  color: red;
+  font-size: 20px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
 }
 
 /* .redConD::after {

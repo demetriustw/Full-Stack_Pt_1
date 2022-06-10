@@ -344,12 +344,10 @@ window.addEventListener("keyup", (event) => {
     switch (event.key) {
       case "Escape":
         keys.Escape.pressed = false;
+        console.log(player.position);
+        player.position(x, y);
+        enemy.position(x, y);
         text.style.display = "flex";
-        console.log(canvas.width);
-        canvas.width += 1;
-        console.log(canvas.width);
-        canvas.width -= 1;
-        console.log(canvas.width);
         break;
     }
   }

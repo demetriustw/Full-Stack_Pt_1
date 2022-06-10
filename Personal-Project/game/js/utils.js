@@ -28,7 +28,10 @@ function determineWinner({ player, enemy, timerId }) {
 let timer = 60;
 let timerId;
 function decreaseTimer() {
-  if (timer > 0) {
+  if (!keys.Escape.pressed) {
+    timer = 60;
+    document.querySelector("#timer").innerHTML = timer;
+  } else if (timer > 0 || keys.Escape.pressed) {
     timerId = setTimeout(decreaseTimer, 1000);
     timer--;
     document.querySelector("#timer").innerHTML = timer;
